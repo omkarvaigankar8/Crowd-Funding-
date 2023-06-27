@@ -30,7 +30,7 @@ const CreateCampaign = () => {
                 setIsLoading(true);
                 await createCampaign({ ...form, target: ethers.utils.parseUnits(form.target, 18) })
                 setIsLoading(false);
-                // navigate('/');
+                navigate('/');
 
             } else {
                 alert("Provide valid URL");
