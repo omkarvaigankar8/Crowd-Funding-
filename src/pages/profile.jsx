@@ -7,10 +7,10 @@ import { DisplayCampaigns } from '../components';
 const Profile = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [campaigns, setCampaigns] = useState();
-    const { contract, address, userCampaigns } = useStateContext();
+    const { contract, address, getUserCampaigns } = useStateContext();
 
     const fetchCampaigns = async () => {
-        const data = await userCampaigns();
+        const data = await getUserCampaigns();
         console.log("DDD", data)
         setCampaigns(data);
         setIsLoading(false)
